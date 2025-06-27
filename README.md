@@ -78,26 +78,13 @@ Place this Excel file in the same directory as the scrape_sf_references.py scrip
 You run the script from your terminal using a single command with several arguments to specify what it should do.
 
 Example for a Standard Object (Case)
-python scrape_sf_references.py ^
-    --file "Your_Excel_File.xlsx" ^
-    --sheet "Cases" ^
-    --object-api-name "Case" ^
-    --instance "your-instance.my.salesforce.com" ^
-    --start-at-label "Status Detail"
-
-(Note: ^ is for line breaks on Windows. On macOS/Linux, use \.)
+python scrape_sf_references.py --file "Your_Excel_File.xlsx" --sheet "Cases" --object-api-name "Case" --instance "your-instance.my.salesforce.com" --start-at-label "Status Detail"
 
 Example for a Custom Object (CPQ Quote)
 For custom objects, you must also provide the --object-id.
 
-python scrape_sf_references.py ^
-    --file "Your_Excel_File.xlsx" ^
-    --sheet "CPQ Quotes" ^
-    --object-api-name "SBQQ__Quote__c" ^
-    --object-id "01If2000001ah0m" ^
-    --instance "your-instance.my.salesforce.com" ^
-    --start-at-label "*Total Hourly Remote Guarding Rate" ^
-    --limit 50
+python scrape_sf_references.py --file "Your_Excel_File.xlsx" --sheet "CPQ Quotes" --object-api-name "SBQQ__Quote__c" --object-id "01If2000001ah0m" --instance "your-instance.my.salesforce.com" --start-at-label "*Total Hourly Remote Guarding Rate" --limit 50
+
 
 Command-Line Arguments
 --file: (Required) The name of your Excel file (e.g., "Elite_Test_Copy.xlsx").
